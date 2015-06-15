@@ -20,3 +20,7 @@ Run
 ```
 cmsRun TriggerEfficiency/python/ConfFile_cfg.py
 ```
+
+## Configure ##
+The triggerpaths given in the config file can be the full paths or truncated for wildcarding.
+E.g. "HLT_Photon135_v" accpets any version.
