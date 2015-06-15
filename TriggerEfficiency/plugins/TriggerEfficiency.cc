@@ -99,7 +99,10 @@ TriggerEfficiency::TriggerEfficiency(const edm::ParameterSet& iConfig)
 {
    edm::LogInfo("Debug") <<   "signal  trigger: " << m_sSignalTriggerPath
                          << "\ncontrol trigger: " << m_sControlTriggerPath;
-   m_eff=m_fs->make<TEfficiency>("eff","efficiency",200,0,500);
+   double low   = iConfig.getUntrackedParameter<double>("rangeLow");
+   double up    = iConfig.getUntrackedParameter<double>("rangeUp");
+   double nBins = iConfig.getUntrackedParameter<int>("nBins");
+   m_eff=m_fs->make<TEfficiency>("eff","efficiency",nBins,low,up);
 }
 
 

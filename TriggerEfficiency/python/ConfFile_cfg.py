@@ -16,6 +16,9 @@ process.source = cms.Source("PoolSource",
 process.demo = cms.EDAnalyzer('TriggerEfficiency',
                               signalTriggerPath=cms.untracked.string("HLT_Photon135_v"),
                               controlTriggerPath=cms.untracked.string("HLT_Photon30_v"),
+                              rangeLow=cms.untracked.double(0.),
+                              rangeUp=cms.untracked.double(500.),
+                              nBins=cms.untracked.int32(200),
                               bits = cms.InputTag("TriggerResults","","HLT"),
                               objects = cms.InputTag("selectedPatTrigger")
 )

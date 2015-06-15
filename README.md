@@ -22,5 +22,6 @@ cmsRun TriggerEfficiency/python/ConfFile_cfg.py
 ```
 
 ## Configure ##
-The triggerpaths given in the config file can be the full paths or truncated for wildcarding.
+* The triggerpaths given in the config file can be the full paths or truncated for wildcarding.
 E.g. "HLT_Photon135_v" accpets any version.
+* The binning and ranges of the histograms can be set via `rangeLow,rangeUp,nBins`
